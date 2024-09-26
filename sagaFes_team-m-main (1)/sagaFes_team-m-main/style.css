@@ -1,0 +1,53 @@
+body {
+  background-color: #000;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: "Noto Serif JP", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -1; /* 背景が一番後ろ */
+}
+
+#video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: 0; /* ビデオが背景より前 */
+}
+
+#canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* キャンバスが一番前 */
+}
+
+button {
+  position: absolute;
+  text-align: center;
+  font-size: 20px;
+  z-index: 10; /* ボタンをキャンバスの上に配置 */
+  padding: 10px 30px 20px 25px;
+  background-color:firebrick;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+button:hover {
+  background-color: rgb(128, 24, 24);
+}
